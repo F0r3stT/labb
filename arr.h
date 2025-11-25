@@ -19,7 +19,6 @@ public:
     MyArr();
     ~MyArr();
 
-    // Rule of Five: Запрещаем копирование и перемещение
     MyArr(const MyArr&) = delete;
     MyArr& operator=(const MyArr&) = delete;
     MyArr(MyArr&&) = delete;
@@ -36,7 +35,6 @@ public:
     void addAt(int idx, const string& val);
     void repArr(int idx, const string& val);
     
-    // Изменено согласно modernize-use-trailing-return-type
     auto lenArr() const -> int;
 
     void saveToFile(const string& filename) const;
